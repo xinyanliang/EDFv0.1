@@ -1,6 +1,9 @@
 # EDF
 Evolutionary Deep Fusion Method for Chemical Structure Recognition
 
+![alt Model](images/model.png)
+
+
 ### Run
 
 1. Data preparation.
