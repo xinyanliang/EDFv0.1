@@ -6,7 +6,7 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
 
 ### Run
 1. Requirement
-- tensorflow-gpu  2.0.3
+   - tensorflow-gpu  2.0.3
 2. Data preparation.
    - Download “ChemBook-10k” data set from https://pan.baidu.com/s/16dwtyQ2xLUA69whHR906Ug 提取码：x36i;
    - Put it into ChemBook-10k fold;
