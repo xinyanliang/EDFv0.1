@@ -24,6 +24,6 @@ Note: Some hyper-parameters can be specified in config.py.
 |MLB | 80.41%| 91.94%|
 |MFB | 85.78%| 96.46%|
 |TFN | 77.90%| 88.46%|
-|EDF.| 86.84%| 96.66%|
-|EDF.| 87.49%| 96.94%|
-
+|EDF (reused=False) | 86.84%| 96.66%|
+|EDF (reused=True) | 87.49%| 96.94%|
+|EDF (best) | 90.06%| 98.43%|
