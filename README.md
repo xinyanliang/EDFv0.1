@@ -1,7 +1,7 @@
 # EDF
 Evolutionary Deep Fusion Method for Chemical Structure Recognition
 
-![alt Model](images/model.png)
+![The overall framework of EDF](images/model.png)
 
 
 ### Run
@@ -49,4 +49,4 @@ It is worth noting that there is little restriction for query image
 such as size, format, resolution,
 which brings very good user experience.
 
-![alt Model](images/patent2.png)
+![The interface of image-based patent search](images/patent2.png)
