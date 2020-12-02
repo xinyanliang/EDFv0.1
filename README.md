@@ -4,7 +4,7 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
 ### Run
 
 1. Download data from https://pan.baidu.com/s/16dwtyQ2xLUA69whHR906Ug 提取码：x36i,
-and then put it into EF fold.
+and then put it into EDF fold.
 2. Run the following script
 
     ```python train_EF.py```
