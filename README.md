@@ -12,12 +12,12 @@ and then put it into EDF fold.
 Note: Some hyper-parameters can be specified in config.py.
 
 
-; # ### Experimental results
+*[^_^]: ### Experimental results
 
-; |Methods | Code |Hyper-paras. |Acc. | Result_dir|
-; |----|----|----|----|----|
-; |EF|3-1-2 |paper-config.py|     84.04%| EF4_result-----best |
-;|EF|1-2-2 |paper-config.py|     84.41%| EF4_result-----best |
-;|EF|2-4-2 |paper-config.py|     84.54%| EF4_result-----best |
-;|EF|1-4-2 |paper-config.py|     85.25%| EF3_result |
+*[^_^]: |Methods | Code |Hyper-paras. |Acc. | Result_dir|
+*[^_^]: |----|----|----|----|----|
+*[^_^]: |EF|3-1-2 |paper-config.py|     84.04%| EF4_result-----best |
+*[^_^]:|EF|1-2-2 |paper-config.py|     84.41%| EF4_result-----best |
+*[^_^]:|EF|2-4-2 |paper-config.py|     84.54%| EF4_result-----best |
+*[^_^]:|EF|1-4-2 |paper-config.py|     85.25%| EF3_result |
 
