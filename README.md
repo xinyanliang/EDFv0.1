@@ -4,7 +4,7 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
 ![The overall framework of EDF](images/model.png)
 
 
-### Run
+# Run
 1. Requirement
    - tensorflow-gpu  2.0.3
 2. Data preparation.
@@ -18,7 +18,7 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
 Note: Some hyper-parameters can be specified in config.py.
 
 
-### Experimental results
+# Experimental results
 
 |Methods  |Top-1 |Top-5 |
 |----|----|----|
@@ -35,7 +35,7 @@ Note: Some hyper-parameters can be specified in config.py.
 |EDF (best) | 90.06%| 98.43%|
 
 
-### Application
+# Application
 
 With EDF, we develop an image-based patent search subsystem
 that has been integrated into the big paten data analysis platform at Shanxi University.
