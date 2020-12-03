@@ -4,12 +4,12 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
 ![The overall framework of EDF](images/model.png)
 
 
-# Run
+# QuickStart
 1. Requirements
    - tensorflow-gpu  2.0.3
 2. Data preparation.
-   - Download “ChemBook-10k” data set from https://pan.baidu.com/s/16dwtyQ2xLUA69whHR906Ug 提取码：x36i;
-   - Put it into ChemBook-10k fold;
+   - Download "ChemBook-10k" data set from https://pan.baidu.com/s/16dwtyQ2xLUA69whHR906Ug 提取码：x36i;
+   - Put the data set into "ChemBook-10k" folder;
    - Modify paramenter 'data_name'='ChemBook-10k' in config.py file.
 3. Run the following script
 
