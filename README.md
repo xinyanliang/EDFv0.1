@@ -17,11 +17,11 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
    
    |--------------EDF<br/>
       &nbsp;&nbsp;&nbsp;|---ChemBook-10k<br/>
-         &nbsp;&nbsp;&nbsp;|---view<br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---view<br/>
       &nbsp;&nbsp;&nbsp;|---ChEMBL-10k<br/>
-         &nbsp;&nbsp;&nbsp;|---view<br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---view<br/>
       &nbsp;&nbsp;&nbsp;|---PubChem-10k<br/>
-         &nbsp;&nbsp;&nbsp;|---view<br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---view<br/>
    
    
    - Download "ChemBook-10k" data set from https://pan.baidu.com/s/16dwtyQ2xLUA69whHR906Ug 提取码：x36i;
