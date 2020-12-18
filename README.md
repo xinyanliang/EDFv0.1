@@ -14,6 +14,16 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
    |ChemBook-10k| https://pan.baidu.com/s/1G1P-_YyDhBTeWXhTeyOaBw  | 4fcj  |
    |ChEMBL-10k  | | |
    |PubChem-10k | https://pan.baidu.com/s/1ha8a119gyMul2rzT_aoUlA  | olhr |
+   
+   |--------------EDF
+      |---ChemBook-10k
+         |---view
+      |---ChEMBL-10k
+         |---view
+      |---PubChem-10k
+         |---view
+   
+   
    - Download "ChemBook-10k" data set from https://pan.baidu.com/s/16dwtyQ2xLUA69whHR906Ug 提取码：x36i;
    - Put the data set into "ChemBook-10k" folder;
    - Modify paramenter 'data_name'='ChemBook-10k' in config.py file.
