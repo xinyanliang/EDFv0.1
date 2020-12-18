@@ -9,6 +9,7 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
    - tensorflow-gpu  2.0.3
    - python 3
 2. Data preparation
+   
    You can download data from the following url.
    
    |Datasets  |URL |提取码 |
