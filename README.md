@@ -44,33 +44,33 @@ Note: Some hyper-parameters can be specified in config.py.
 
 # Experimental results
 
-|Methods  |Top-1 |Top-5 |
-|----|----|----|
-|Add.| 82.22%| 92.97%|
-|Avg.| 82.20%| 91.98%|
-|Max.| 80.31%| 91.67%|
-|Mul.| 81.03%| 92.13%|
-|Con.| 80.46%| 90.07%|
-|MLB | 80.41%| 91.94%|
-|MFB | 85.78%| 96.46%|
-|TFN | 77.90%| 88.46%|
-|EDF (reused=False) | 86.84%| 96.66%|
-|EDF (reused=True) | 87.49%| 96.94%|
-|EDF (best) | 90.06%| 98.43%|
+   |Methods  |Top-1 |Top-5 |
+   |----|----|----|
+   |Add.| 82.22%| 92.97%|
+   |Avg.| 82.20%| 91.98%|
+   |Max.| 80.31%| 91.67%|
+   |Mul.| 81.03%| 92.13%|
+   |Con.| 80.46%| 90.07%|
+   |MLB | 80.41%| 91.94%|
+   |MFB | 85.78%| 96.46%|
+   |TFN | 77.90%| 88.46%|
+   |EDF (reused=False) | 86.84%| 96.66%|
+   |EDF (reused=True) | 87.49%| 96.94%|
+   |EDF (best) | 90.06%| 98.43%|
 
 
 # Application
 
-With EDF, we develop an image-based patent search subsystem
-that has been integrated into the big paten data analysis platform at Shanxi University.
-As shown in the following Figure, molecular structure search based on EDF
-has been used as one of the four search ways
-(other three are quick search, advanced search and logic search).
-Different from other three types of search ways based on text query,
-EDF based on image query may be more convenient and
-efficient for cheminformatics researchers in most cases.
-It is worth noting that there is little restriction for query image
-such as size, format, resolution,
-which brings very good user experience.
+   With EDF, we develop an image-based patent search subsystem
+   that has been integrated into the big paten data analysis platform at Shanxi University.
+   As shown in the following Figure, molecular structure search based on EDF
+   has been used as one of the four search ways
+   (other three are quick search, advanced search and logic search).
+   Different from other three types of search ways based on text query,
+   EDF based on image query may be more convenient and
+   efficient for cheminformatics researchers in most cases.
+   It is worth noting that there is little restriction for query image
+   such as size, format, resolution,
+   which brings very good user experience.
 
 ![The interface of image-based patent search](images/patent2.png)
