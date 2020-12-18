@@ -29,7 +29,8 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
       &nbsp;&nbsp;&nbsp;|---ChEMBL-10k<br/>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---view<br/>
       &nbsp;&nbsp;&nbsp;|---PubChem-10k<br/>
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---view<br/>```
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---view<br/>
+   ```
   
 3. Run the following script
 
