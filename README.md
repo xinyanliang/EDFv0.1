@@ -15,19 +15,13 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
    |ChEMBL-10k  | 链接：https://pan.baidu.com/s/1ZcPyJq8C7EEV0Trmc37U8g | 69n3 |
    |PubChem-10k | https://pan.baidu.com/s/1ha8a119gyMul2rzT_aoUlA  | olhr |
    
-   |--------------EDF
-   
-      |---ChemBook-10k
-      
-         |---view
-         
-      |---ChEMBL-10k
-      
-         |---view
-         
-      |---PubChem-10k
-      
-         |---view
+   |--------------EDF<br/>
+      |---ChemBook-10k<br/>
+         |---view<br/>
+      |---ChEMBL-10k<br/>
+         |---view<br/>
+      |---PubChem-10k<br/>
+         |---view<br/>
    
    
    - Download "ChemBook-10k" data set from https://pan.baidu.com/s/16dwtyQ2xLUA69whHR906Ug 提取码：x36i;
