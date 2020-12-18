@@ -8,7 +8,7 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
 1. Requirements
    - tensorflow-gpu  2.0.3
    - python 3
-2. Data preparation.
+2. Data preparation
    |Datasets  |URL |提取码 |
    |----|----|----|
    |ChemBook-10k| https://pan.baidu.com/s/1G1P-_YyDhBTeWXhTeyOaBw  | 4fcj  |
@@ -21,9 +21,9 @@ Evolutionary Deep Fusion Method for Chemical Structure Recognition
    - Put the data set into "ChemBook-10k" folder;
    - Modify paramenter 'data_name'='ChemBook-10k' in config.py file.
   
-  The structure of the folder is follows:
+   The structure of the folder is follows:
   
- |--------------EDF<br/>
+   |--------------EDF<br/>
       &nbsp;&nbsp;&nbsp;|---ChemBook-10k<br/>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---view<br/>
       &nbsp;&nbsp;&nbsp;|---ChEMBL-10k<br/>
