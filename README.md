@@ -1,5 +1,5 @@
 # EDF
-Evolutionary Deep Fusion Method for Chemical Structure Recognition
+Evolutionary Deep Fusion Method and Its Application in Chemical Structure Recognition
 
 ![The overall framework of EDF](images/model.png)
 
