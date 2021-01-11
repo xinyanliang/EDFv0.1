@@ -8,13 +8,16 @@ import config
 opt = os.path
 paras = config.get_configs()
 nb_view = paras['nb_view']
+image_size = paras['image_size']
+w, h, c = image_size['w'], image_size['h'], image_size['c']
 
 def get_data(data_base_dir='..'):
     print('Data loading ......')
     train_x = np.load(os.path.join(data_base_dir, 'train_X.npy'))
     test_x = np.load(os.path.join(data_base_dir, 'test_X.npy'))
-    train_x = np.expand_dims(train_x, axis=-1)
-    test_x = np.expand_dims(test_x, axis=-1)
+    if c == 1:
+        train_x = np.expand_dims(train_x, axis=-1)
+        test_x = np.expand_dims(test_x, axis=-1)
     train_x = (train_x / 127.5) - 1.
     test_x = (test_x / 127.5) - 1.
     train_y = np.load(os.path.join(data_base_dir, 'train_Y.npy'))
@@ -34,8 +37,8 @@ def get_views(view_data_dir='views'):
     for model in models_ls:
         view_train_x.append(np.load(os.path.join(view_data_dir, model+'train_X.npy')))
         view_test_x.append(np.load(os.path.join(view_data_dir, model+'test_X.npy')))
-    train_y = np.load(os.path.join(view_data_dir, 'train_Y1.npy'))
-    test_y = np.load(os.path.join(view_data_dir, 'test_Y1.npy'))
+    train_y = np.load(os.path.join(view_data_dir, 'train_Y.npy'))
+    test_y = np.load(os.path.join(view_data_dir, 'test_Y.npy'))
     train_y = tf.keras.utils.to_categorical(train_y)
     test_y = tf.keras.utils.to_categorical(test_y)
 
