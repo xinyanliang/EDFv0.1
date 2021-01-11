@@ -14,9 +14,10 @@ Evolutionary Deep Fusion Method and Its Application in Chemical Structure Recogn
    
    |Datasets  |URL |提取码 |
    |----|----|----|
-   |ChemBook-10k| https://pan.baidu.com/s/1G1P-_YyDhBTeWXhTeyOaBw  | 4fcj  |
-   |ChEMBL-10k  | https://pan.baidu.com/s/1ZcPyJq8C7EEV0Trmc37U8g | 69n3 |
-   |PubChem-10k | https://pan.baidu.com/s/1ha8a119gyMul2rzT_aoUlA  | olhr |
+   |ChemBook-10k     | https://pan.baidu.com/s/1G1P-_YyDhBTeWXhTeyOaBw  | 4fcj  |
+   |ChEMBL-10k       | https://pan.baidu.com/s/1ZcPyJq8C7EEV0Trmc37U8g | 69n3 |
+   |PubChem-10k      | https://pan.baidu.com/s/1ha8a119gyMul2rzT_aoUlA  | olhr |
+   |tiny-imagenet200 | https://pan.baidu.com/s/1v5g9j_drRYNK9M3lOjXCqg  | tacd |
    
    Take dataset "ChemBook-10k" for example,
    
