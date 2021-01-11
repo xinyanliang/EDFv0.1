@@ -10,6 +10,7 @@ import tensorflow as tf
 # https://stackoverflow.com/questions/60130622/warningtensorflow-with-constraint-is-deprecated-and-will-be-removed-in-a-future
 tf.get_logger().setLevel('ERROR')
 import numpy as np
+from os.path import join as pjoin
 import random
 from sklearn import metrics
 from multiprocessing import Pool
@@ -32,10 +33,13 @@ epochs = paras['epochs']
 classes = paras['classes']
 pop_size = paras['pop_size']
 nb_iters = paras['nb_iters']
-# ['add', 'mul', 'cat', 'max', 'avg']
+data_name = paras['data_name']
 
+# ['add', 'mul', 'cat', 'max', 'avg']
 # Only load all view once
-view_train_x, train_y, view_test_x, test_y = get_views(view_data_dir='views')
+data_base_dir = os.path.join('..', data_name)
+view_data_dir = os.path.join(data_base_dir, 'view')
+view_train_x, train_y, view_test_x, test_y = get_views(view_data_dir=view_data_dir)
 
 
 def train_individual(individual_code, result_save_dir='.', gpu='0'):
@@ -101,7 +105,7 @@ def multi_proccess_train(i_iter, Q_t, shared_code_sets):
             shared_code_sets.add(code_str)
             individual_code_str.append(
                 pool.apply_async(func=train_individual,
-                                 args=(Q_t[ind_i], result_save_dir, str(gpu_idx))))
+                                 args=(Q_t[ind_i], result_save_dir, str(gpu_idx)))) #GPU +1
             gpu_idx += 1
 
         if gpu_idx == gpus or ind_i == (pop_size1-1):
@@ -139,6 +143,10 @@ def train():
 
 
 if __name__ == '__main__':
-    result_save_dir = paras['result_save_dir']
+    result_save_dir = pjoin(data_name+'_view_result', paras['result_save_dir'])
+    print(result_save_dir)
+    print(data_name, fused_nb_feats)
     os.makedirs(result_save_dir, exist_ok=True)
     train()
+    print(result_save_dir)
+    print(data_name, fused_nb_feats)

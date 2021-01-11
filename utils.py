@@ -5,6 +5,7 @@ import tensorflow as tf
 import os
 import config
 paras = config.get_configs()
+data_name = paras['data_name']
 
 def get_nb_view_by_individal_code(code):
     nb_view = (len(code) + 1) // 2  # 视图个数
@@ -18,7 +19,7 @@ def write_result_file(str, fn='result.csv'):
         f.flush()
 
 
-def load_result(result_fn=os.path.join(paras['result_save_dir'], 'result.csv')):
+def load_result(result_fn=os.path.join(data_name+'_view_result', paras['result_save_dir'], 'result.csv')):
     shared_code_acc = {}
     shared_code_acc_set = set()
     with open(result_fn) as f:

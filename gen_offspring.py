@@ -9,6 +9,7 @@ from config import get_configs
 paras = get_configs()
 nb_fusion_way = len(paras['fusion_ways'])
 nb_view = paras['nb_view']
+is_remove = paras['is_remove']
 
 def quchong(p):
     views_p = utils.get_nb_view_by_individal_code(p)
@@ -24,7 +25,7 @@ def quchong(p):
     return pp
 
 
-def crossover(p_1, p_2, crossover_rate, is_remove=False, max_len=40):
+def crossover(p_1, p_2, crossover_rate, is_remove=is_remove, max_len=40):
     p1 = copy.deepcopy(p_1)
     p2 = copy.deepcopy(p_2)
     views_p1 = utils.get_nb_view_by_individal_code(p1)
@@ -49,7 +50,7 @@ def crossover(p_1, p_2, crossover_rate, is_remove=False, max_len=40):
         return p1, p2
 
 
-def mutation(p1, mutation_rate, is_remove=False, max_len=40):
+def mutation(p1, mutation_rate, is_remove=is_remove, max_len=40):
     p = copy.deepcopy(p1)
     views_p = utils.get_nb_view_by_individal_code(p)
     len_code = len(p)
