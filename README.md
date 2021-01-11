@@ -42,5 +42,3 @@ Evolutionary Deep Fusion Method and Its Application in Chemical Structure Recogn
 Note: Some hyper-parameters can be specified in config.py.
 
 
-
-![The interface of image-based patent search](images/patent2.png)
