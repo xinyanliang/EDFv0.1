@@ -43,18 +43,4 @@ Note: Some hyper-parameters can be specified in config.py.
 
 
 
-# Application
-
-   With EDF, we develop an image-based patent search subsystem
-   that has been integrated into the big paten data analysis platform at Shanxi University.
-   As shown in the following Figure, molecular structure search based on EDF
-   has been used as one of the four search ways
-   (other three are quick search, advanced search and logic search).
-   Different from other three types of search ways based on text query,
-   EDF based on image query may be more convenient and
-   efficient for cheminformatics researchers in most cases.
-   It is worth noting that there is little restriction for query image
-   such as size, format, resolution,
-   which brings very good user experience.
-
 ![The interface of image-based patent search](images/patent2.png)
