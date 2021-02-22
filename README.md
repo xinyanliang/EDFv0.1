@@ -50,8 +50,25 @@ Note: Some hyper-parameters can be specified in config.py.
 EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
 these images from test set of ChEMBL-10k dataset are used query images.
 
-1. Download the trained models from the URL, and then put them into the models folder;
+1. Download the trained EDF and view exteacter models from the URL, and then put them into the models folder;
 2. Construct a retrieve database using your own dataset by running
+   1) pp
+      ```python
+      def imgs2npy(imgs_file_list, save_dir='database', save_name='x'):
+       '''
+       Read images according to their path, and then save them in the format of npy
+       :param imgs_file_list: path of images to read
+       :param save_name: path of npy file to save
+       :return: images in the format of array of numpy
+       '''
+       imgs = []
+       for img_fn in imgs_file_list:
+           imgs.append(npy_util.read_image(img_fn))
+       imgs = np.array(imgs)
+       np.save(os.path.join(save_dir, save_name), imgs)
+       return imgs
+      ```
+   3) 
    ```python
       from features import feature
       from data_utils import data_uitl
