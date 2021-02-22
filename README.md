@@ -51,6 +51,52 @@ these images from test set of ChEMBL-10k dataset are used query images.
 ```python
 python open_set_report.py
 ```
+```python
+from sklearn.metrics import pairwise_distances
+import numpy as np
+import os
+from retrieve import databaseUtil
+databaseUtil.construct_retrieve_database_test()
+data_dir = 'database'
+code = '3-2-0-1-0-4-0'
+
+
+def get_data():
+    train_x = np.load(os.path.join(data_dir, code+'train_X.npy'))
+    train_y = np.load(os.path.join(data_dir, 'train_Y.npy'))
+    test_x = np.load(os.path.join(data_dir, code+'test_X.npy'))
+    test_y = np.load(os.path.join(data_dir, 'test_Y.npy'))
+    return train_x, train_y, test_x, test_y
+
+
+def cal_dist(topk=[1, 5, 10], metric="euclidean"):
+    train_x, train_y, test_x, test_y = get_data()
+    num_test = test_x.shape[0]
+    train_y = np.tile(train_y, (num_test, 1))
+    dis = pairwise_distances(X=test_x, Y=train_x, metric=metric, n_jobs=-1)
+    sort_idx1 = np.argsort(dis, axis=1)
+
+    def report_topk(k):
+
+        sort_idx = sort_idx1[:, :k]
+        count = 0
+        for i in range(num_test):
+            if test_y[i] in train_y[i, sort_idx[i, :]]:
+                count += 1
+        print(count/num_test)
+    for ki in topk:
+        report_topk(ki)
+
+
+'''
+Step 1: get_feats.py
+Step 2: get_feats_by_EDF.py
+Step 3: retrieve.py
+'''
+if __name__ == '__main__':
+    os.environ["CUDA_VISIBLE_DEVICES"] = '7'
+    cal_dist(topk=[1, 5, 10, 15, 20, 50], metric="euclidean")
+```
 
 
 ## Example Usage: Build your recognition system based on your own dataset
