@@ -43,3 +43,8 @@ Evolutionary Deep Fusion Method and Its Application in Chemical Structure Recogn
 Note: Some hyper-parameters can be specified in config.py.
 
 
+# How to Use EDF in Open-set Scenario
+- Construct a retrieve database using your own dataset by running ``` python ```
+- 
+
+
