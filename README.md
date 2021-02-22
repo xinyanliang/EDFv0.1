@@ -5,7 +5,7 @@ The code is still very raw in terms of utility. More time needs to be taken to m
 ![The overall framework of EDF](images/model.png)
 
 
-# QuickStart
+## QuickStart
 1. Requirements
    - tensorflow-gpu  2.0.3
    - python 3
@@ -46,7 +46,7 @@ The code is still very raw in terms of utility. More time needs to be taken to m
 Note: Some hyper-parameters can be specified in config.py.
 
 
-# How to Use EDF in Open-set Scenario
+## How to Use EDF in Open-set Scenario
 1. Download the trained models from the URL, and then put them into the models folder;
 2. Construct a retrieve database using your own dataset by running
    ```python
