@@ -50,7 +50,7 @@ Note: Some hyper-parameters can be specified in config.py.
 EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
 these images from test set of ChEMBL-10k dataset are used query images.
 
-1. Download the trained EDF and view exteacter models from the URL, and then put them into the models folder;
+1. Download the trained EDF and view exteacter models from the url https://pan.baidu.com/s/1RtV3QACJpTPtWLJ7NdlSzg, and then put them into the models folder;
 2. Construct a retrieve database using your own dataset by running
    ```python
       from features import feature
