@@ -49,9 +49,7 @@ Note: Some hyper-parameters can be specified in config.py.
 Setting: EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
 these images from test set of ChEMBL-10k dataset are used query images.
 ```python
-python open_set_report.py
-```
-```python
+# open_set_report.py
 from sklearn.metrics import pairwise_distances
 import numpy as np
 import os
@@ -87,15 +85,13 @@ def cal_dist(topk=[1, 5, 10], metric="euclidean"):
     for ki in topk:
         report_topk(ki)
 
-
-'''
-Step 1: get_feats.py
-Step 2: get_feats_by_EDF.py
-Step 3: retrieve.py
-'''
 if __name__ == '__main__':
     os.environ["CUDA_VISIBLE_DEVICES"] = '7'
     cal_dist(topk=[1, 5, 10, 15, 20, 50], metric="euclidean")
+```
+run the above open_set_report.py script as follows:
+```python
+python open_set_report.py
 ```
 
 
