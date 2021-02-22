@@ -1,5 +1,6 @@
 # EDF
-Evolutionary Deep Fusion Method and Its Application in Chemical Structure Recognition
+Evolutionary Deep Fusion Method and Its Application in Chemical Structure Recognition.
+The code is still very raw in terms of utility. More time needs to be taken to make it perfect.
 
 ![The overall framework of EDF](images/model.png)
 
@@ -38,13 +39,15 @@ Evolutionary Deep Fusion Method and Its Application in Chemical Structure Recogn
   
 3. Run the following script
 
-    ```python train_EF.py```
+    ```python
+    python train_EF.py```
 
 Note: Some hyper-parameters can be specified in config.py.
 
 
 # How to Use EDF in Open-set Scenario
+- Download the trained models from the URL, and then put them into the models folder;
 - Construct a retrieve database using your own dataset by running ``` python ```
-- 
+- Query your images url 
 
 
