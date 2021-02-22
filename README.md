@@ -52,8 +52,10 @@ these images from test set of ChEMBL-10k dataset are used query images.
 
 1. Download the trained EDF and view exteacter models from the URL, and then put them into the models folder;
 2. Construct a retrieve database using your own dataset by running
-   1) pp
-      ```python
+   ```python
+      from features import feature
+      from data_utils import data_uitl
+      
       def imgs2npy(imgs_file_list, save_dir='database', save_name='x'):
        '''
        Read images according to their path, and then save them in the format of npy
@@ -67,11 +69,7 @@ these images from test set of ChEMBL-10k dataset are used query images.
        imgs = np.array(imgs)
        np.save(os.path.join(save_dir, save_name), imgs)
        return imgs
-      ```
-   3) 
-   ```python
-      from features import feature
-      from data_utils import data_uitl
+      
       def construct_retrieve_database(edf_model_name='3-2-0-1-0-4-0'):
          train_x, train_y, test_x, test_y = data_uitl.get_data('database')
          x = [train_x, test_x]
