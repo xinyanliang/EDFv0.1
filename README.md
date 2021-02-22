@@ -11,7 +11,7 @@ The code is still very raw in terms of utility. More time needs to be taken to m
    - python 3
 2. Data preparation
    
-   You can download data from the following url.
+   You can download data from the following urls.
    
    |Datasets  |URL |提取码 |
    |----|----|----|
@@ -45,10 +45,15 @@ The code is still very raw in terms of utility. More time needs to be taken to m
 
 Note: Some hyper-parameters can be specified in config.py.
 
-
-## Example Usage: Build your recognition system based on your own dataset
+## Reproduce our result on then open-set scenario
 EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
 these images from test set of ChEMBL-10k dataset are used query images.
+```python
+python open_set_report.py
+```
+
+
+## Example Usage: Build your recognition system based on your own dataset
 
 1. Download the trained EDF and view exteacter models from the url https://pan.baidu.com/s/1RtV3QACJpTPtWLJ7NdlSzg, and then put them into the models folder;
 2. Construct a retrieve database using your own dataset by running
