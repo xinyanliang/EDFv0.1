@@ -47,8 +47,8 @@ Note: Some hyper-parameters can be specified in config.py.
 
 
 # How to Use EDF in Open-set Scenario
-- Download the trained models from the URL, and then put them into the models folder;
-- Construct a retrieve database using your own dataset by running 
+## Download the trained models from the URL, and then put them into the models folder;
+## Construct a retrieve database using your own dataset by running 
    ```python
       from features import feature
       from data_utils import data_uitl
@@ -61,7 +61,8 @@ Note: Some hyper-parameters can be specified in config.py.
          for i in range(len(x)):
             views = Feats.get_feats_multi_views(view_models, x=x[i], save_data_suffix=save_data_suffix[i])
             Feats.get_feats_by_edf(views=views, save_data_suffix=save_data_suffix[i], edf_model_name=edf_model_name)
-      ```
-- Query your images url 
+     ```
+## Query your images url 
+
 
 
