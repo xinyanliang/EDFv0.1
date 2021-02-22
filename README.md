@@ -50,6 +50,8 @@ Note: Some hyper-parameters can be specified in config.py.
 - Download the trained models from the URL, and then put them into the models folder;
 - Construct a retrieve database using your own dataset by running 
    ```python
+from features import feature
+from data_utils import data_uitl
    def construct_retrieve_database(edf_model_name='3-2-0-1-0-4-0'):
        train_x, train_y, test_x, test_y = data_uitl.get_data('database')
        x = [train_x, test_x]
