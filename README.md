@@ -45,8 +45,8 @@ The code is still very raw in terms of utility. More time needs to be taken to m
 
 Note: Some hyper-parameters can be specified in config.py.
 
-## Reproduce our result on then open-set scenario
-EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
+## Reproduce our result on the open-set scenario
+Setting: EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
 these images from test set of ChEMBL-10k dataset are used query images.
 ```python
 python open_set_report.py
