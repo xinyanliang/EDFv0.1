@@ -46,7 +46,7 @@ The code is still very raw in terms of utility. More time needs to be taken to m
 Note: Some hyper-parameters can be specified in config.py.
 
 
-## Example Usage: How to Use EDF in Open-set Scenario
+## Example Usage: Build your recognition system based on your own dataset
 EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
 these images from test set of ChEMBL-10k dataset are used query images.
 
