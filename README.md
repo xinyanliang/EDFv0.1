@@ -162,13 +162,24 @@ Prerpocess your dataset. Save data in the format of numpy array by running follo
 ```python
 $imgs2npy(imgs_file_list, save_dir='database', save_name='x')
 ```
-Extract multi-view features by running train_view_extractor.py based on trained view extractor models.
+Train view extractor models using your own dataset by running train_view_extractor.py.
 ```python
 python train_view_extractor.py -g 0 -m 0
 options:
      -g,--gpus  <int> GPU id on which model runs
      -m,--model <int> view extractor id, it take one value from 0-9. Support 10 type models as extractor ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3','resnet18', 'resnet34', 'desnet169', 'desnet201', 'NASNetMobile']
 
+```
+Extract multi-view features by extract_multi_view_feats function based on trained view extractor models.
+```python
+def extract_multi_view_feats():
+    x = data_uitl.preprocess_input(data_saved_dir='database', save_name='x')
+    view_models = ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3']
+    Feats = feature.Feature(model_dir='models', save_data_dir='database', database_name='database')
+    views = Feats.get_feats_multi_views(view_models, x=x, save_data_suffix=None)
+```
+```bash
+$ python 
 ```
 
 ### Example Usage: Finding a proper deep fusion model based on your own generated view features
