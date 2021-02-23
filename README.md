@@ -140,8 +140,8 @@ $python open_set_report.py
 ```python
 python train_view_extractor.py -g 0 -m 0
 options:
-     -g <value int> GPU id on which model runs
-     -m <value int > view extractor id, it take one value from 0-9. Support 10 type models as extractor ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3','resnet18', 'resnet34', 'desnet169', 'desnet201', 'NASNetMobile']
+     -g,--gpus  <int> GPU id on which model runs
+     -m,--model <int> view extractor id, it take one value from 0-9. Support 10 type models as extractor ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3','resnet18', 'resnet34', 'desnet169', 'desnet201', 'NASNetMobile']
 
 ```
 
