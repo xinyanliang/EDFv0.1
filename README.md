@@ -140,7 +140,8 @@ $python open_set_report.py
 - Step 3  Generate retrieve database by extracting fusion layer of deep fusion network
 - Step 4  Provide the query service by api
 ### Example Usage: Training your own view extractor using your own dataset
-Prerpocess your dataset. Save data in the format of numpy array by running following imgs2npy function.
+Prerpocess your dataset. Save data in the format of numpy array by running following
+```imgs2npy()```  function.
 ```python
    from features import feature
    from data_utils import npy_util
@@ -162,9 +163,7 @@ Prerpocess your dataset. Save data in the format of numpy array by running follo
        np.save(os.path.join(save_dir, save_name), imgs)
        return imgs            
 ```
-```python
-$imgs2npy(imgs_file_list, save_dir='database', save_name='x')
-```
+
 Train view extractor models using your own dataset by running train_view_extractor.py.
 ```python
 python train_view_extractor.py -g 0 -m 0
@@ -173,7 +172,7 @@ options:
      -m,--model <int> view extractor id, it take one value from 0-9. Support 10 type models as extractor ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3','resnet18', 'resnet34', 'desnet169', 'desnet201', 'NASNetMobile']
 
 ```
-Extract multi-view features by extract_multi_view_feats function based on trained view extractor models.
+Extract multi-view features by calling the following function ```extract_multi_view_feats``` based on trained view extractor models.
 ```python
 def extract_multi_view_feats():
     x = data_uitl.preprocess_input(data_saved_dir='database', save_name='x')
@@ -189,7 +188,7 @@ $python train_EDF.py
 
 
 ### Example Usage: Generate retrieve database 
-Generate retrieve database by calling the following function ```python construct_retrieve_database```
+Generate retrieve database by calling the following function ```construct_retrieve_database()```
    ```python
       from features import feature
       from data_utils import npy_util
