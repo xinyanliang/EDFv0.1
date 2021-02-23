@@ -1,5 +1,4 @@
 # EDF
-Evolutionary Deep Fusion Method and Its Application in Chemical Structure Recognition.
 **Description**: This package includes the python code of the EDF algorithm for multi-view fusion and its application in chemical structure recognition (close-set and open-set).
 It solves themulti-view features fusion problem by searching an optimal combination scheme of different basic fusion operators.
 
