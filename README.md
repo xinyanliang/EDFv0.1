@@ -70,8 +70,8 @@ def get_configs():
     return paras
   
    options:
-         data_name the dataset name to process currently, options ChemBook, Chembl, PubChem and tiny-imagenet200
-         gpu_list   GPU id list to train EDF. More the number of GPUs is, less time EDF takes. The maximum number of GPUs is equal to the size of population.
+         data_name <string>   the dataset name to process currently, options ChemBook, Chembl, PubChem and tiny-imagenet200
+         gpu_list  <list>   GPU id list to train EDF. More the number of GPUs is, less time EDF takes. The maximum number of GPUs is equal to the size of population.
          
 ```
 
@@ -138,8 +138,8 @@ python open_set_report.py
 ```python
 python train_view_extractor.py -g 0 -m 0
 options:
-     -g  GPU id on which model runs
-     -m  view extractor id, it take one value from 0-9. Support 10 type models as extractor ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3','resnet18', 'resnet34', 'desnet169', 'desnet201', 'NASNetMobile']
+     -g <value int> GPU id on which model runs
+     -m <value int > view extractor id, it take one value from 0-9. Support 10 type models as extractor ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3','resnet18', 'resnet34', 'desnet169', 'desnet201', 'NASNetMobile']
 
 ```
 
