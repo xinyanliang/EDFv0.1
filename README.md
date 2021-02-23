@@ -1,6 +1,8 @@
 # EDF
 **Description**: This package includes the python code of the EDF algorithm for multi-view fusion and its application in chemical structure recognition (close-set and open-set).
-It solves themulti-view features fusion problem by searching an optimal combination scheme of different basic fusion operators.
+It solves the multi-view features fusion problem by searching an optimal combination scheme of different basic fusion operators.
+
+**Requirement**: The package was developed with python3 and tensorflow-gpu(2.0.3).
 
 **ATTN**: This package is free for academic usage. You can run it at your own risk. For other purposes, please contact Dr. Xinyan Liang.
 
@@ -8,13 +10,9 @@ It solves themulti-view features fusion problem by searching an optimal combinat
 ![The overall framework of EDF](images/model.png)
 
 
-## QuickStart
-1. Requirements
-   - tensorflow-gpu  2.0.3
-   - python 3
-2. Data preparation
+## Data preparation
    
-   You can download data from the following urls.
+You can download data from the following urls.
    
    |Datasets  |URL |提取码 |
    |----|----|----|
