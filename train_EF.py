@@ -18,10 +18,10 @@ import time
 import argparse
 from data_utils.data_uitl import get_views
 import config
-from code2net import code2net
-import population_init
-import gen_offspring
-import utils
+from edf.code2net import code2net
+from edf import population_init
+from edf import gen_offspring
+from tools import utils
 
 
 paras = config.get_configs()
@@ -34,12 +34,14 @@ classes = paras['classes']
 pop_size = paras['pop_size']
 nb_iters = paras['nb_iters']
 data_name = paras['data_name']
+idx_split = paras['idx_split']-1
 
 # ['add', 'mul', 'cat', 'max', 'avg']
 # Only load all view once
 data_base_dir = os.path.join('..', data_name)
 view_data_dir = os.path.join(data_base_dir, 'view')
-view_train_x, train_y, view_test_x, test_y = get_views(view_data_dir=view_data_dir)
+view_train_x, train_y, view_test_x, test_y = get_views(
+    data_name=data_name, view_data_dir=view_data_dir, idx_split=idx_split)
 
 
 def train_individual(individual_code, result_save_dir='.', gpu='0'):
@@ -105,7 +107,7 @@ def multi_proccess_train(i_iter, Q_t, shared_code_sets):
             shared_code_sets.add(code_str)
             individual_code_str.append(
                 pool.apply_async(func=train_individual,
-                                 args=(Q_t[ind_i], result_save_dir, str(gpu_idx)))) #GPU +1
+                                 args=(Q_t[ind_i], result_save_dir, str(gpu_idx+1)))) #GPU +1
             gpu_idx += 1
 
         if gpu_idx == gpus or ind_i == (pop_size1-1):
