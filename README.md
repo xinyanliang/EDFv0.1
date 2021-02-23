@@ -137,6 +137,31 @@ $python open_set_report.py
 - Step 1  Training your own view extrtractor using your own dataset
 - Step 2  Finding a proper deep fusion model based on your own generated view features
 ### Example Usage: Training your own view extractor using your own dataset
+Prerpocess your dataset. Save data in the format of numpy array by running following imgs2npy function.
+```python
+      from features import feature
+      from data_utils import npy_util
+      import os
+      import numpy as np
+      from data_utils import data_uitl
+      
+      def imgs2npy(imgs_file_list, save_dir='database', save_name='x'):
+       '''
+       Read images according to their path, and then save them in the format of npy
+       :param imgs_file_list: path of images to read
+       :param save_name: path of npy file to save
+       :return: images in the format of array of numpy
+       '''
+       imgs = []
+       for img_fn in imgs_file_list:
+           imgs.append(npy_util.read_image(img_fn))
+       imgs = np.array(imgs)
+       np.save(os.path.join(save_dir, save_name), imgs)
+       return imgs            
+```
+```python
+$imgs2npy(imgs_file_list, save_dir='database', save_name='x')
+```
 ```python
 python train_view_extractor.py -g 0 -m 0
 options:
