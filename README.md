@@ -137,6 +137,8 @@ $python open_set_report.py
 - Step 1  Train your own view extrtractor using your own dataset or download our trained EDF and view extracter models from the link https://pan.baidu.com/s/1RtV3QACJpTPtWLJ7NdlSzg, then put them into the models folder.
 **Note**：The performance may be better by training your all model based on your own dataset
 - Step 2  Find a proper deep fusion model based on your own generated view features
+- Step 3  Generate retrieve database by extracting fusion layer of deep fusion network
+- Step 4  User use the query service by api
 ### Example Usage: Training your own view extractor using your own dataset
 Prerpocess your dataset. Save data in the format of numpy array by running following imgs2npy function.
 ```python
