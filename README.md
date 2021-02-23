@@ -178,9 +178,6 @@ def extract_multi_view_feats():
     Feats = feature.Feature(model_dir='models', save_data_dir='database', database_name='database')
     views = Feats.get_feats_multi_views(view_models, x=x, save_data_suffix=None)
 ```
-```bash
-$ python 
-```
 
 ### Example Usage: Finding a proper deep fusion model based on your own generated view features
 ```python
