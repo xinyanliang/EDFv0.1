@@ -75,9 +75,9 @@ def get_configs():
          
 ```
 
-    ```python
-    python train_EDF.py
-    ```
+```python
+    $python train_EDF.py
+```
 
 Note: Some hyper-parameters can be specified in config.py.
 
@@ -131,7 +131,7 @@ if __name__ == '__main__':
 ```
 run the above open_set_report.py script as follows:
 ```python
-python open_set_report.py
+$python open_set_report.py
 ```
 
 ## Example Usage: Training your own view extrtractor using your own dataset
@@ -145,7 +145,7 @@ options:
 
 ## Example Usage: Finding a proper deep fusion model based on your own generated view features
 ```python
-python train_EDF.py
+$python train_EDF.py
 ```
 
 
