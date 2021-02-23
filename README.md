@@ -81,8 +81,7 @@ def get_configs():
     $python train_EDF.py
 ```
 
-
-## Reproduce our results on the open-set scenario
+### Reproduce our results on the open-set scenario
 Setting: EDF and view extracters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
 these images from test set of ChEMBL-10k dataset are used query images.
 
@@ -134,8 +133,8 @@ run the above open_set_report.py script as follows:
 ```python
 $python open_set_report.py
 ```
-
-## Example Usage: Training your own view extrtractor using your own dataset
+##  ziji
+### Example Usage: Training your own view extrtractor using your own dataset
 ```python
 python train_view_extractor.py -g 0 -m 0
 options:
@@ -144,13 +143,13 @@ options:
 
 ```
 
-## Example Usage: Finding a proper deep fusion model based on your own generated view features
+### Example Usage: Finding a proper deep fusion model based on your own generated view features
 ```python
 $python train_EDF.py
 ```
 
 
-## Example Usage: Build your recognition system based on your own dataset
+### Example Usage: Build your recognition system based on your own dataset
 
 1. Download the trained EDF and view exteacter models from the link https://pan.baidu.com/s/1RtV3QACJpTPtWLJ7NdlSzg, then put them into the models folder;
 3. Construct a retrieve database using your own dataset by running
