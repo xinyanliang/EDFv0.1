@@ -40,7 +40,7 @@ Take dataset "ChemBook-10k" for example,
    
   
 ## Reproduce our results on ChemBook-10k, ChEMBL-10k and PubChem-10k
-Before running train_EDF.py, you have to set some parameters in config.py file.
+Before running train_EDF.py, you have to set some parameters in ```config.py``` file.
 ```python
 def get_configs():
     paras = {
@@ -129,7 +129,7 @@ if __name__ == '__main__':
     os.environ["CUDA_VISIBLE_DEVICES"] = '7'
     cal_dist(topk=[1, 5, 10, 15, 20, 50], metric="euclidean")
 ```
-run the above open_set_report.py script as follows:
+run the above ```open_set_report.py``` script as follows:
 ```python
 $python open_set_report.py
 ```
@@ -164,7 +164,7 @@ Prerpocess your dataset. Save data in the format of numpy array by running follo
        return imgs            
 ```
 
-Train view extractor models using your own dataset by running train_view_extractor.py.
+Train view extractor models using your own dataset by running ```python train_view_extractor.py```.
 ```python
 python train_view_extractor.py -g 0 -m 0
 options:
@@ -172,7 +172,7 @@ options:
      -m,--model <int> view extractor id, it take one value from 0-9. Support 10 type models as extractor ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3','resnet18', 'resnet34', 'desnet169', 'desnet201', 'NASNetMobile']
 
 ```
-Extract multi-view features by calling the following function ```extract_multi_view_feats``` based on trained view extractor models.
+Extract multi-view features by calling the following ```extract_multi_view_feats()``` function based on trained view extractor models.
 ```python
 def extract_multi_view_feats():
     x = data_uitl.preprocess_input(data_saved_dir='database', save_name='x')
@@ -188,8 +188,8 @@ $python train_EDF.py
 
 
 ### Example Usage: Generate retrieve database 
-Generate retrieve database by calling the following function ```construct_retrieve_database()```
-   ```python
+Generate retrieve database by calling the following ```construct_retrieve_database()``` function.
+  ```python
       from features import feature
       from data_utils import npy_util
       import os
@@ -203,9 +203,9 @@ Generate retrieve database by calling the following function ```construct_retrie
           views = Feats.get_feats_multi_views(view_models, x=x, save_data_suffix=None)
           Feats.get_feats_by_edf(views=views, save_data_suffix=None, edf_model_name='3-2-0-1-0-4-0')
             
-     ```
-3. Query your images url 
-   
+   ```
+     
+### Example Usage: Provide the query service by api
 
 
 
