@@ -98,6 +98,15 @@ run the above open_set_report.py script as follows:
 python open_set_report.py
 ```
 
+## Example Usage: Training your own view extrtractor using your own dataset
+```python
+python train_view_extractor.py -g 0 -m 0
+options:
+     -g  GPU id on which model runs
+     -m  view extractor id, it take one value from 0-9. Support 10 type models as extractor ['resnet50', 'desnet121', 'MobileNetV2', 'Xception', 'InceptionV3','resnet18', 'resnet34', 'desnet169', 'desnet201', 'NASNetMobile']
+
+```
+
 
 ## Example Usage: Build your recognition system based on your own dataset
 
