@@ -107,6 +107,11 @@ options:
 
 ```
 
+## Example Usage: Finding a proper deep fusion model based on your own generated view features
+```python
+python train_EDF.py
+```
+
 
 ## Example Usage: Build your recognition system based on your own dataset
 
