@@ -38,7 +38,7 @@ The code is still very raw in terms of utility. More time needs to be taken to m
    
   
 ## Reproduce our results on ChemBook-10k, ChEMBL-10k and PubChem-10k
-Before rungning train_EDF.py, your have to set some parameters in config.py file.
+Before rungning train_EDF.py, you have to set some parameters in config.py file.
 ```python
 def get_configs():
     paras = {
@@ -79,7 +79,6 @@ def get_configs():
     $python train_EDF.py
 ```
 
-Note: Some hyper-parameters can be specified in config.py.
 
 ## Reproduce our results on the open-set scenario
 Setting: EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
