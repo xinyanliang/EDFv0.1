@@ -138,7 +138,7 @@ $python open_set_report.py
 **Note**：The performance may be better by training your all model based on your own dataset
 - Step 2  Find a proper deep fusion model based on your own generated view features
 - Step 3  Generate retrieve database by extracting fusion layer of deep fusion network
-- Step 4  User use the query service by api
+- Step 4  Provide the query service by api
 ### Example Usage: Training your own view extractor using your own dataset
 Prerpocess your dataset. Save data in the format of numpy array by running following imgs2npy function.
 ```python
@@ -188,28 +188,14 @@ $python train_EDF.py
 ```
 
 
-### Example Usage: Build your recognition system based on your own dataset
-
+### Example Usage: Generate retrieve database 
+Generate retrieve database by calling the following function ```python construct_retrieve_database```
    ```python
       from features import feature
       from data_utils import npy_util
       import os
       import numpy as np
       from data_utils import data_uitl
-      
-      def imgs2npy(imgs_file_list, save_dir='database', save_name='x'):
-       '''
-       Read images according to their path, and then save them in the format of npy
-       :param imgs_file_list: path of images to read
-       :param save_name: path of npy file to save
-       :return: images in the format of array of numpy
-       '''
-       imgs = []
-       for img_fn in imgs_file_list:
-           imgs.append(npy_util.read_image(img_fn))
-       imgs = np.array(imgs)
-       np.save(os.path.join(save_dir, save_name), imgs)
-       return imgs
       
       def construct_retrieve_database():
           x = data_uitl.preprocess_input(data_saved_dir='database', save_name='x')
@@ -218,7 +204,6 @@ $python train_EDF.py
           views = Feats.get_feats_multi_views(view_models, x=x, save_data_suffix=None)
           Feats.get_feats_by_edf(views=views, save_data_suffix=None, edf_model_name='3-2-0-1-0-4-0')
             
-       imgs2npy(imgs_file_list, save_dir='database', save_name='x')
      ```
 3. Query your images url 
    
