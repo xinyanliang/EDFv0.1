@@ -13,7 +13,7 @@ It solves the multi-view features fusion problem by searching an optimal combina
 
 ## Data preparation
    
-You can download data from the following urls.
+Download data from the following links.
    
    |Datasets  |URL |提取码 |
    |----|----|----|
@@ -22,7 +22,7 @@ You can download data from the following urls.
    |PubChem-10k      | https://pan.baidu.com/s/1ha8a119gyMul2rzT_aoUlA  | olhr |
    |tiny-imagenet200 | https://pan.baidu.com/s/1v5g9j_drRYNK9M3lOjXCqg  | tacd |
    
-   Take dataset "ChemBook-10k" for example,
+Take dataset "ChemBook-10k" for example,
    
    - Download "ChemBook-10k" data set;
    - Put the data set into "ChemBook-10k" folder;
