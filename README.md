@@ -38,16 +38,11 @@ The code is still very raw in terms of utility. More time needs to be taken to m
    
   
 ## Reproduce our results on ChemBook-10k, ChEMBL-10k and PubChem-10k
-Befor rungning train_EDF.py, your have to set some parameters in config.py file.
+Before rungning train_EDF.py, your have to set some parameters in config.py file.
 ```python
-# 'data_name': 'tiny-imagenet200',
-        # 'data_name': 'ChemBook',
-        # 'data_name': 'Chembl',
-        # 'data_name': 'PubChem',
-        # 'data_name': 'AWA1',  # 50 class 7view
-        'data_name': 'Reuters',  #6 class 5view
-        # 'data_name': 'mfeat',  #10 class 6view
-        # 'data_name': 'nus_wide',  #10 class 7view
+def get_configs():
+    paras = {
+        'data_name': 'ChemBook',
         'fusion_ways': ['add', 'mul', 'cat', 'max', 'avg'],
         'fused_nb_feats': 128,
         'nb_view': 5,
@@ -60,7 +55,7 @@ Befor rungning train_EDF.py, your have to set some parameters in config.py file.
         'epochs': 100,
         'batch_size': 64,
         'patience': 10,
-        # EF
+        # EDF
         'is_remove': True,
         'crossover_rate': 0.9,
         'mutation_rate': 0.2,
@@ -68,10 +63,16 @@ Befor rungning train_EDF.py, your have to set some parameters in config.py file.
         'max_len': 40,
         # data set information
         'image_size': {
-            'w': 230, 'h': 230, 'c': 3},
-        # 'classes': 10000,
-        # 'classes': 50,
-        'classes': 6,
+            'w': 230, 'h': 230, 'c': 1},
+        'classes': 10000,
+
+    }
+    return paras
+  
+   options:
+         data_name the dataset name to process currently, options ChemBook, Chembl, PubChem and tiny-imagenet200
+         gpu_list   GPU id list to train EDF. More the number of GPUs is, less time EDF takes. The maximum number of GPUs is equal to the size of population.
+         
 ```
 
     ```python
