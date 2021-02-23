@@ -38,7 +38,7 @@ The code is still very raw in terms of utility. More time needs to be taken to m
    
   
 ## Reproduce our results on ChemBook-10k, ChEMBL-10k and PubChem-10k
-Before rungning train_EDF.py, you have to set some parameters in config.py file.
+Before running train_EDF.py, you have to set some parameters in config.py file.
 ```python
 def get_configs():
     paras = {
@@ -81,7 +81,7 @@ def get_configs():
 
 
 ## Reproduce our results on the open-set scenario
-Setting: EDF and view exteacters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
+Setting: EDF and view extracters are trained on PubChem-10k dataset; retrieve database is constructed using training set of ChEMBL-10k dataset;
 these images from test set of ChEMBL-10k dataset are used query images.
 
 1. Download the trained EDF and view exteacter models from the link https://pan.baidu.com/s/1RtV3QACJpTPtWLJ7NdlSzg, then put them into the models folder;
