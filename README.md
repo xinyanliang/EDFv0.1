@@ -134,8 +134,9 @@ run the above open_set_report.py script as follows:
 $python open_set_report.py
 ```
 ##  Build your recognition system based on your own dataset
-- Step 1  Training your own view extrtractor using your own dataset
-- Step 2  Finding a proper deep fusion model based on your own generated view features
+- Step 1  Train your own view extrtractor using your own dataset or download our trained EDF and view extracter models from the link https://pan.baidu.com/s/1RtV3QACJpTPtWLJ7NdlSzg, then put them into the models folder;
+（<font color="#dd0000">Note</font> the performance is better by training your all model based on your own dataset）.
+- Step 2  Find a proper deep fusion model based on your own generated view features
 ### Example Usage: Training your own view extractor using your own dataset
 Prerpocess your dataset. Save data in the format of numpy array by running following imgs2npy function.
 ```python
@@ -187,8 +188,6 @@ $python train_EDF.py
 
 ### Example Usage: Build your recognition system based on your own dataset
 
-1. Download the trained EDF and view extracter models from the link https://pan.baidu.com/s/1RtV3QACJpTPtWLJ7NdlSzg, then put them into the models folder;
-3. Construct a retrieve database using your own dataset by running
    ```python
       from features import feature
       from data_utils import npy_util
