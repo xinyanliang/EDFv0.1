@@ -133,7 +133,9 @@ run the above open_set_report.py script as follows:
 ```python
 $python open_set_report.py
 ```
-##  ziji
+##  Build your recognition system based on your own dataset
+1. Step 1  Training your own view extrtractor using your own dataset
+2. Step 2  Finding a proper deep fusion model based on your own generated view features
 ### Example Usage: Training your own view extrtractor using your own dataset
 ```python
 python train_view_extractor.py -g 0 -m 0
