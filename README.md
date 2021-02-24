@@ -27,17 +27,19 @@ Take dataset "ChemBook-10k" for example,
    - Download "ChemBook-10k" data set;
    - Put the data set into "ChemBook-10k" folder;
    - Modify paramenter 'data_name'='ChemBook-10k' in config.py file.
-  
-   The structure of the folder is follows:
-  
-       |-----EDF
-           |---ChemBook-10k
-               |---view 
-           |---ChEMBL-10k
-               |---view
-           |---PubChem-10k
-               |---view
-   
+
+   The folder structure should be:
+    
+    .
+    ├── EDF                    
+    │   ├── ChemBook-10k                 
+    │   │   └── view   
+    │   ├── ChEMBL-10k                
+    │   │   └── view 
+    │   ├── PubChem-10k                
+    │   │   └── view 
+    │   └── ...
+    └── ...
   
 ## Reproduce our results on ChemBook-10k, ChEMBL-10k and PubChem-10k
 Before running train_EDF.py, you have to set some parameters in ```config.py``` file.
